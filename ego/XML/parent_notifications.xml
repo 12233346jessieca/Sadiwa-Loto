@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notifications><notification date="2024-05-21" time="14:35">hello</notification><notification date="2024-05-21" time="14:56">hi</notification><notification date="2024-05-22" time="15:09" target="parent">for both</notification><notification date="2024-05-22" time="15:43" target="parent">notificstion</notification><notification date="2024-05-22" time="16:00" target="parent">fianls of the student</notification></notifications>

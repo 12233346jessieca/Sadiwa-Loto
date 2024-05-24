@@ -1,0 +1,24 @@
+<session>
+    <user>
+        <username>Pearl Joy Baradero</username>
+        <children>
+            <child>
+                <name>Mark Heindrich B. Loto - BSI/T-2C</name>
+                <teachers>
+                    <teacher>Wilmer Pascual</teacher>
+                    <teacher>Ivy Aguiflor</teacher>
+                    <teacher>Kierven Villaruel</teacher>
+                </teachers>
+            </child>
+            <child>
+                <name>Shaireen Dianne B. Loto - BSBA-2B</name>
+                <teachers>
+                    <teacher>Teacher 1</teacher>
+                    <teacher>Teacher 2</teacher>
+                    <teacher>Teacher 3</teacher>
+                </teachers>
+            </child>
+        </children>
+    </user>
+</session>
+

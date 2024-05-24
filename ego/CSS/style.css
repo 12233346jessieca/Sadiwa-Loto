@@ -1,0 +1,507 @@
+/*DASHBOARD */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+}
+.container {
+    width: 50%;
+}
+
+
+.dashboard-header {
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+.username {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+.username:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+}
+
+
+.welcome-message {
+    background-color: #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.box-container {
+    transition: transform 0.5s  ease;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box a{
+    margin-left: 100px;
+}
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px; /* Center text vertically */
+    margin: 10px;
+    background-size: cover; /* Ensure the background image covers the box */
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.box:nth-child(1) {
+    background-color: #88F420;
+    background-image: url('../img/notif.jpg');
+}
+
+
+.box:nth-child(2) {
+    background-color: #F86AC2;
+    background-image: url('../img/acad.jpg');
+}
+
+.box:nth-child(3) {
+    background-color: #4E58A6;
+    background-image: url('../img/messages.jpg');
+}
+
+.box:nth-child(4) {
+    background-color: #615656;
+    background-image: url('../img/meetings.jpg');
+}
+
+.box:nth-child(5) {
+    background-color: #873A3A;
+    background-image: url('../img/feedbacks.jpg');
+}
+
+
+.box:nth-child(6) {
+    background-color: #626475;
+    background-image: url('../img/profile.jpg');
+}
+
+
+/* NOTIFICATION */
+
+/* 2. Breadcrumb of Home>Notifications */
+
+.breadcrumb {
+    background-color: #ccc;
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    text-align: left;
+    color: black;
+}
+
+/* 3. Name (Mark Heindrich Loto - BSI/T-2C) in a gray background */
+.user-info {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    display: flex;
+
+}
+
+/* 4. 1 big rectangle for notifications that can hold paragraphs */
+.notification-box {
+    background-color: lightgrey; 
+    padding: 50px;
+    margin: 20px 0px 20px 0px;
+    color: black;
+    text-align: left;
+    display: flex;
+    
+}
+/* Text box styling */
+.big-input-box {
+    width: 100%; 
+    height: 150px; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Rounded corners */
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 14px; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Placeholder styling */
+.big-input-box::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+/* Focus state styling */
+.big-input-box:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: dodgerblue; /* Border color on focus */
+}
+
+/* Hover state styling */
+.big-input-box:hover {
+    border-color: #999; /* Border color on hover */
+}
+
+/* CSS for Send Button */
+.send-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 999; /* Ensure the button is on top of other content */
+}
+
+.send-button:hover {
+    background-color: #45a049;
+}
+
+/* CSS for Recipients Dropdown */
+.directory-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.message-title {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+/*PRIVATE MESSAGES*/
+/* Common Styles */        
+.container1 {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 80px;
+    margin-right: 50px; 
+    margin-left: 50px;
+                       
+}            
+.message-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+
+
+}
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.sent {
+    background-color: #e2f7cb;
+    text-align: right;
+}
+.received {
+    background-color: #e9e9e9;
+    text-align: left;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.new-message-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.new-message-button:hover {
+    background-color: #0056b3;
+}
+
+/*MEETINGS*/
+.container2 {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container2 form {
+    margin-top: 20px;
+}
+
+.container2 label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.container2 select,
+.container2 input[type="date"],
+.container2 input[type="time"],
+.container2 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container2 textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.container2 input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container2 input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* NEW MESSAGES */
+
+}
+
+.container2 {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+select,
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    font-size: 16px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* Customize appearance of the date picker icon */
+    background: transparent;
+    color: #870000; /* Maroon color */
+    cursor: pointer;
+    padding: 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    /* Customize appearance of the time picker icon */
+    background: transparent;
+    color: #870000; /* Maroon color */
+    cursor: pointer;
+    padding: 0;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+    /* Add focus styles */
+    outline: none;
+    border-color: #ff758c; /* Lighter maroon border color on focus */
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*acadperformance*/
+.container3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.box1 {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+/* USER PROFILE */
+
+.small-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(33% - 20px);
+    margin-left: 50px;
+}
+.big-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(33% - 20px);
+    margin-left: 50px;
+}
+
+.small-box h3, .big-box h2 {
+    margin-top: 0;
+}
+
+.small-box p, .big-box p {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+    .small-box .big-box {
+        text-align: center;
+        width: calc(50% - 20px);
+        text-align: center;
+    }
+}
+
+.box1 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+}
+
+.box2 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+
+}
+
+.box3 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+}
+
+.box4 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+}
+
+.box5 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+}
+
+.box6 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    color: black;
+    text-align: left;
+    display: flex;
+}
+.box-container img {
+    margin: 0px;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+.box-container {
+    margin-left: 150px
+}
